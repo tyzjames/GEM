@@ -91,17 +91,37 @@ static const uint8_t arrowBtn_bits [] PROGMEM = {
   0x00, 0xc0, 0xa0, 0x90, 0xa0, 0xc0, 0x00, 0x00
 };
 
-#define checkboxUnchecked_width  7
+#define checkboxUnchecked_width  8
 #define checkboxUnchecked_height 8
 static const uint8_t checkboxUnchecked_bits [] PROGMEM = {
-  0x00, 0xfc, 0x84, 0x84, 0x84, 0x84, 0xfc, 0x00
+  // 0x00, 0xfc, 0x84, 0x84, 0x84, 0x84, 0xfc, 0x00
+  0b11111111,
+  0b10000001,
+  0b10000001,
+  0b10000001,
+  0b10000001,
+  0b10000001,
+  0b11111111
 };
 
-#define checkboxChecked_width  7
+#define checkboxChecked_width  8
 #define checkboxChecked_height 8
+// static const uint8_t checkboxChecked_bits [] PROGMEM = {
+//   0x02, 0xf4, 0x8c, 0xd4, 0xa4, 0x84, 0xfc, 0x00
+// };
+// 0b0000010,
+// 0b11110100
+
 static const uint8_t checkboxChecked_bits [] PROGMEM = {
-  0x02, 0xf4, 0x8c, 0xd4, 0xa4, 0x84, 0xfc, 0x00
+0b11111111,
+0b11000011,
+0b10100101,
+0b10011001,
+0b10100101,
+0b11000011,
+0b11111111
 };
+
 
 #define selectArrows_width  6
 #define selectArrows_height 8
