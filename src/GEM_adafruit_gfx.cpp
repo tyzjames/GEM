@@ -378,7 +378,7 @@ void GEM_adafruit_gfx::drawMenuPointer(boolean clear) {
       byte yText = pointerPosition + getMenuItemInsetOffset() + _menuItemFont[_menuItemFontSize].baselineOffset;
       byte yDraw = pointerPosition + getMenuItemInsetOffset(true);
       byte screensCount = (_menuPageCurrent->itemsCount % _menuItemsPerScreen == 0) ? _menuPageCurrent->itemsCount / _menuItemsPerScreen : _menuPageCurrent->itemsCount / _menuItemsPerScreen + 1;
-      _agfx.fillRect(0, pointerPosition - 1, _agfx.width() + (screensCount > 1 ? -2 : 0), _menuItemHeight + 1, clear ? _menuBackgroundColor : _menuForegroundColor);
+      _agfx.fillRect(0, pointerPosition, _agfx.width() + (screensCount > 1 ? -2 : 0), _menuItemHeight, clear ? _menuBackgroundColor : _menuForegroundColor);
       printMenuItem(menuItemTmp, yText, yDraw, clear ? _menuForegroundColor : _menuBackgroundColor);
       if (menuItemTmp->readonly) {
         for (byte i = 0; i < (_menuItemHeight + 2) / 2; i++) {
